@@ -47,7 +47,7 @@ param useApplicationInsights bool = true
 param useSearch bool = true
 
 var abbrs = loadJsonContent('./abbreviations.json')
-var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
+var resourceToken = toLower(uniqueString(subscription().id)
 var tags = { 'azd-env-name': environmentName }
 var aiConfig = loadYamlContent('./ai.yaml')
 
